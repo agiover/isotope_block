@@ -1,0 +1,40 @@
+<?php
+
+/**
+ * @file
+ * Contains isotope_block.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\block_content\BlockContentInterface;
+use Drupal\block\Entity\Block;
+
+/**
+ * Implements hook_help().
+ */
+function isotope_block_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the isotope_block module.
+    case 'help.page.isotope_block':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Isotope Block') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function isotope_block_theme() {
+  return [
+    'isotope_block' => [
+      'variables' => [
+        'taxonomies' => NULL,
+        'galleries' => NULL,
+      ],
+    ],
+  ];
+}

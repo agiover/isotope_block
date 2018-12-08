@@ -1,0 +1,21 @@
+{{ attach_library('isotope_block/global') }}
+
+<div class="grid-container">
+
+  <div class="button-group filter-button-group">
+    <button class="btn btn-primary" data-filter="*">Todos</button>
+    {% for taxonomy in taxonomies %}
+      <button class="btn btn-primary" data-filter=".{{ taxonomy.class }}">{{ taxonomy.title }}</button>
+    {% endfor %}
+  </div>
+
+  <div class="grid row">
+    {% for gallery in galleries %}
+      <div class="grid-item col-sm-6 col-md-4 {{ gallery.class }}">
+        <img src="{{ gallery.thumbnail }}" alt="{{ gallery.title }}" class="img-fluid" />
+        <h6>{{ gallery.title }}</h6>
+      </div>
+    {% endfor %}
+  </div>
+
+</div>

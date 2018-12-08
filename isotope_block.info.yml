@@ -1,0 +1,7 @@
+name: 'Isotope Block'
+type: module
+description: 'Isotope Block'
+core: 8.x
+package: 'Custom'
+dependencies:
+  - block

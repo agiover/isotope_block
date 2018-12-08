@@ -1,0 +1,9 @@
+
+# Gallery menu items definition
+entity.gallery_entity.collection:
+  title: 'Gallery'
+  route_name: entity.gallery_entity.collection
+  description: 'List Gallery (bundles)'
+  parent: system.admin_structure
+  weight: 99
+

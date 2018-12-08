@@ -1,0 +1,5 @@
+global:
+  version: 1.x
+  js:
+    //unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js: {}
+    js/isotope_block.js: {}

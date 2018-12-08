@@ -1,0 +1,21 @@
+isotope_block.gallery_entity.*:
+  type: config_entity
+  label: 'Gallery config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    tid:
+      type: string
+      label: 'Term ID'
+    image:
+      type: string
+      label: 'Image'
+    weight:
+      type: integer
+      label: 'Weight'
+    uuid:
+      type: string
