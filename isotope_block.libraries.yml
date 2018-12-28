@@ -1,5 +1,9 @@
 global:
   version: 1.x
+  css:
+    theme:
+      /libraries/blueimp-gallery/css/blueimp-gallery.min.css: {}
   js:
     //unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js: {}
+    /libraries/blueimp-gallery/js/jquery.blueimp-gallery.min.js: {}
     js/isotope_block.js: {}

@@ -25,6 +25,7 @@ class IsotopeBlock extends BlockBase {
       '#taxonomies' => $args['taxonomies'],
       '#galleries' => $args['galleries'],
     ];
+    $build['isotope_block']['#cache']['max-age'] = 0;
 
     return $build;
   }
@@ -32,6 +33,7 @@ class IsotopeBlock extends BlockBase {
   public function get_arguments($vid) {
     $galleries = [];
     $taxonomies = [];
+    $image_style = "blueimp";
     $terms =\Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadTree($vid);
     foreach ($terms as $term) {
       $term_data[$term->tid] = $term->name;
@@ -42,7 +44,7 @@ class IsotopeBlock extends BlockBase {
     foreach ($entities as $entity) {
       $galleries[] = [
         'title' => $entity->label(),
-        'thumbnail' => $entity->imageURL(),
+        'thumbnail' => $entity->imageStyle($image_style),
         'image' => $entity->imageURL(),
         'class' => 'taxonomy-' . $entity->tid(),
       ];

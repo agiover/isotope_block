@@ -36,6 +36,12 @@ class GalleryEntityDeleteForm extends EntityConfirmFormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
+//    $image = $this->entity->image();
+//    if (!empty($image)) {
+//      $file = File::load($image);
+//      $file_usage = \Drupal::service('file.usage');
+//      $file_usage->delete($file, 'isotope_block', 'gallery_entity', $this->entity->id());
+//    }
     $this->entity->delete();
 
     drupal_set_message(

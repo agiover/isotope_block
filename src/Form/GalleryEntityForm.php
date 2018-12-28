@@ -72,6 +72,8 @@ class GalleryEntityForm extends EntityForm {
         $file = File::load($image[0]);
         $file->setPermanent();
         $file->save();
+        $file_usage = \Drupal::service('file.usage');
+        $file_usage->add($file, 'isotope_block', 'gallery_entity', $gallery_entity->id());
       }
     }
     $gallery_entity->setImage($image[0]);
